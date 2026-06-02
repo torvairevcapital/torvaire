@@ -87,7 +87,13 @@
     .ghost { background: transparent; color: var(--text); border: 1px solid rgba(255, 255, 255, 0.15); }
     .ghost:hover { background: rgba(255, 255, 255, 0.05); border-color: rgba(255, 255, 255, 0.3); }
 
-    /* Cards */
+    /* Video Player Styles */
+    .showcase-wrapper { margin: 24px 0 48px; width: 100%; }
+    .video-frame { position: relative; width: 100%; border: 1px solid rgba(255, 255, 255, 0.06); border-radius: 12px; background: #000; line-height: 0; overflow: hidden; box-shadow: 0 24px 48px rgba(0,0,0,0.4); }
+    .torvaire-reel { width: 100%; height: auto; filter: grayscale(15%); transition: filter 0.5s ease; }
+    .torvaire-reel:hover { filter: grayscale(0%); }
+
+    /* Cards Grid */
     .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 32px; }
     @media (max-width: 900px) { .grid { grid-template-columns: 1fr; gap: 16px; } }
     
@@ -111,10 +117,18 @@
     .card p { margin: 0; color: #c8c8c8; font-size: .95rem; font-weight: 300; }
     .chip { display: inline-block; font-size: .68rem; letter-spacing: .15em; text-transform: uppercase; color: var(--muted); border: 1px solid rgba(255, 255, 255, 0.1); padding: 5px 12px; border-radius: 999px; font-weight: 500; }
     
-    /* Contact Section Customization */
-    .contact-card { padding: 32px; display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap; }
-    @media (max-width: 768px) { .contact-card { flex-direction: column; align-items: flex-start; } }
+    /* Interactive Make Intake Form Styles */
+    .form-container { max-width: 650px; margin: 40px 0 20px; text-align: left; width: 100%; }
+    .field-group { margin-bottom: 24px; }
+    .field-group label { display: block; font-size: 0.75rem; text-transform: uppercase; letter-spacing: .15em; margin-bottom: 8px; color: var(--muted); font-weight: 500; }
+    .field-group input, .field-group select, .field-group textarea {
+      width: 100%; padding: 14px; background: rgba(10, 11, 14, 0.8); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 6px; color: var(--text); font-family: 'Inter', sans-serif; font-size: 0.95rem; box-sizing: border-box; transition: all 0.3s ease;
+    }
+    .field-group input:focus, .field-group select:focus, .field-group textarea:focus { border-color: var(--gold); background: rgba(14, 16, 22, 0.9); outline: none; box-shadow: 0 0 12px var(--ring); }
+    .field-group select { appearance: none; -webkit-appearance: none; cursor: pointer; }
     
+    /* Contact Section Customization */
+    .contact-card { padding: 40px; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start; gap: 12px; }
     .small { font-size: .85rem; color: var(--muted); }
     .arrow-link { color: var(--gold); font-size: .88rem; display: inline-block; margin-top: 12px; font-weight: 500; }
     .arrow-link:hover { opacity: 0.8; }
@@ -128,6 +142,7 @@
 <body>
   <div class="wrap">
     
+    <!-- NAVIGATION -->
     <nav class="nav">
       <div class="brand">
         <svg class="logo-wide" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 120" role="img" aria-label="Torvaire Capital logo">
@@ -153,14 +168,15 @@
           </g>
         </svg>
       </div>
-      <a class="pill" href="#mandates">Active Mandates</a>
+      <a class="pill" href="#mandates">Active Focus Areas</a>
     </nav>
 
+    <!-- HERO SECTION -->
     <section class="hero">
       <div>
-        <div class="kicker">Supply • Automation • Digital Assets</div>
+        <div class="kicker">INTEGRATION • WORKFLOWS • GENERATIVE MEDIA</div>
         <h1 class="headline">Quiet Capital.<br>Sharp Execution.</h1>
-        <p class="lead">Torvaire operates as a private holding and modern venture studio. We deploy capital, source premium global commodities, and build standalone automation systems—keeping our standards old-world, and our tempo real-time.</p>
+        <p class="lead">Torvaire operates as a private holding and modern venture studio. We leverage next-generation artificial intelligence to engineer self-sustaining workflows, premium micro-brands, and high-impact commercial media engines.</p>
         <div class="cta-row">
           <a class="btn" href="#mandates">Explore Focus Areas</a>
           <a class="btn ghost" href="#contact">Initiate Contact</a>
@@ -170,47 +186,112 @@
         <div class="card" style="min-height:220px; display:flex; flex-direction:column; justify-content:center;">
           <span class="chip" style="align-self: flex-start;">Operational Stance</span>
           <h3>Lean Architectures, High Conviction</h3>
-          <p>We leverage next-generation artificial intelligence and optimized trade logistics to engineer self-sustaining workflows, borderless supply lines, and premium micro-brands.</p>
+          <p>We analyze friction points for established businesses to map out clear AI integration parameters, protecting margins, reducing overhead, and multiplying scaling output.</p>
         </div>
       </div>
     </section>
 
+   <!-- CINEMATIC MEDIA SHOWCASE -->
+    <section class="showcase-wrapper">
+      <div class="video-frame">
+        <!-- Native, self-hosted streaming path. Bulletproof execution. -->
+        <video autoplay loop muted playsinline controls class="torvaire-reel">
+          <source src="CC v 1.11.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </section>
+
+    <!-- OPERATIONAL FOCUS GRID -->
     <section id="mandates">
       <div class="grid">
         <article class="card">
-          <span class="chip">Sovereign Supply</span>
-          <h3>Commodity Trade</h3>
-          <p>Discreet cross-border facilitation and supply integration. Currently orchestrating lean supply lanes and modern provenance mapping for premium, private-label agricultural imports and tea selections.</p>
+          <span class="chip">Strategic Integration</span>
+          <h3>01 / Business AI Audit</h3>
+          <p>We break down business processes to identify structural bottlenecks. From executive capabilities mapping to comprehensive project implementation, we deploy clear AI strategies built strictly for productivity and capital efficiency.</p>
         </article>
         
         <article class="card">
-          <span class="chip">Generative Media</span>
-          <h3>Synthetic Production</h3>
-          <p>Incubating advanced artificial intelligence models for native video production, synthetic media assets, and programmatic editing workflows. Turning bleeding-edge AI models into localized commercial media engines.</p>
+          <span class="chip">Autonomous Pipelines</span>
+          <h3>02 / Automated Workflows</h3>
+          <p>Replacing repetitive corporate overhead with optimized AI pipelines. We orchestrate systems that automate data management, operational scheduling, and content operations—scaling your output in real-time.</p>
         </article>
         
         <article class="card">
+          <span class="chip">Synthetic Creative</span>
+          <h3>03 / Generative Media</h3>
+          <p>Advanced media infrastructure engineering custom advertising models, premium video content pipelines, and localized design assets. High-impact commercial production deployed at hyper-lean execution speeds.</p>
+        </article>
+
+        <!-- PRESERVED DATA STRUCTURE -->
+        <article class="card" style="grid-column: span 1;">
           <span class="chip">Digital Systems</span>
-          <h3>Borderless Blueprint</h3>
+          <h3>04 / Borderless Blueprint</h3>
           <p>Our public-facing framework for design-led digital asset distribution, operational automation, and tech experiments. Built to showcase extreme efficiency and hyper-lean architectural scaling.</p>
           <a href="https://borderlessblueprint.com" target="_blank" rel="noopener" class="arrow-link">borderlessblueprint.com →</a>
         </article>
       </div>
     </section>
 
+    <!-- INTAKE CONVERSATION & FORM SECTION -->
     <section id="contact" style="margin-top:48px">
       <div class="card contact-card">
         <div>
           <h3 style="margin:0 0 6px">Initiate Contact</h3>
-          <p style="margin:0; color:#d0d0d0; font-size:0.95rem; font-weight:300;">Discreet inquiries and high-conviction syndicates only. No noise.</p>
+          <p style="margin:0 0 24px; color:#d0d0d0; font-size:0.95rem; font-weight:300;">Discreet inquiries and high-conviction mandates only. No noise.</p>
         </div>
-        <div style="display:flex; gap:12px; align-items:center; flex-wrap:wrap">
-          <a class="btn" href="mailto:peter@torvaire.com">peter@torvaire.com</a>
-          <a class="btn ghost" href="mailto:hq@borderlessblueprint.com">hq@borderlessblueprint.com</a>
+
+        <div class="form-container">
+          <!-- Connect your Custom Make Webhook URL directly here -->
+          <form action="YOUR_MAKE_WEBHOOK_URL_HERE" method="POST">
+            
+            <div class="field-group">
+              <label for="name">Name / Company</label>
+              <input type="text" id="name" name="name" required placeholder="John Doe / Acme Corp">
+            </div>
+
+            <div class="field-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" required placeholder="name@company.com">
+            </div>
+
+            <div class="field-group">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" name="phone" required placeholder="+1 (416) 555-0199">
+            </div>
+
+            <div class="field-group">
+              <label for="objective">Primary Objective</label>
+              <select id="objective" name="objective" required>
+                <option value="" disabled selected style="color: #555;">Select execution track...</option>
+                <option value="Generative Media / Video Production">Generative Media & Video Production</option>
+                <option value="Workflow Automation">Workflow Automation / Efficiency</option>
+                <option value="Strategic AI Implementation">Strategic AI Implementation (Intro & Audit)</option>
+                <option value="Venture Inquiry">Venture / Other Inquiries</option>
+              </select>
+            </div>
+
+            <div class="field-group">
+              <label for="message">Project Details / Query</label>
+              <textarea id="message" name="message" rows="5" required placeholder="Describe your current business bottlenecks or required commercial creative fields..."></textarea>
+            </div>
+
+            <div style="margin-top: 32px;">
+              <button type="submit" class="btn">Submit Mandate Request</button>
+            </div>
+          </form>
+        </div>
+
+        <div style="display:flex; gap:12px; align-items:center; flex-wrap:wrap; margin-top: 24px; border-top: 1px solid rgba(255, 255, 255, 0.06); width: 100%; padding-top: 24px;">
+          <span class="small" style="text-transform: uppercase; letter-spacing: 1px;">Direct Channels:</span>
+          <a class="arrow-link" href="mailto:peter@torvaire.com" style="margin:0;">peter@torvaire.com</a>
+          <span style="color: rgba(255,255,255,0.2)">•</span>
+          <a class="arrow-link" href="mailto:hq@borderlessblueprint.com" style="margin:0;">hq@borderlessblueprint.com</a>
         </div>
       </div>
     </section>
 
+    <!-- FOOTER -->
     <footer>
       <div class="footgrid">
         <div class="brand">
