@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Torvaire — Media Studio & Advanced Projects</title>
+  
+  <!-- Explicitly pass strict origin referrers at the site header level to fix Error 153 -->
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --bg: #0b0c10; 
+      --bg-soft: #0e1016; 
+      --text: #F2F2F2; 
+      --muted: #9aa0a6;
+      --gold: #D4AF37; 
+      --card: rgba(16, 19, 26, 0.6);
+      --ring: rgba(212, 175, 55, 0.15);
+    }
+    
+    * { box-sizing: border-box; }
+    html, body { height: 100%; scroll-behavior: smooth; }
+    
+    body {
+      margin: 0; 
+      background: 
+        radial-gradient(1200px 800px at 80% -10%, rgba(212, 175, 55, .05), transparent 60%),
+        linear-gradient(180deg, var(--bg), var(--bg-soft));
+      color: var(--text); 
+      font-family: 'Inter', system-ui, -apple-system, sans-serif; 
+      padding: 40px 24px 100px;
+      letter-spacing: .01em; 
+      line-height: 1.6;
+    }
+    
+    .wrap { max-width: 1160px; margin: 0 auto; }
+    
+    /* Navigation */
+    .nav { display: flex; align-items: center; justify-content: space-between; margin-bottom: 60px; }
+    .btn-back { color: var(--muted); text-decoration: none; font-size: 0.9rem; font-weight: 500; transition: color 0.2s ease; }
+    .btn-back:hover { color: var(--gold); }
+    
+    /* Typography */
+    .headline { font-family: 'Cinzel', serif; color: var(--gold); font-size: clamp(28px, 4vw, 40px); margin: 0 0 12px; font-weight: 400; }
+    .lead { color: #d8d8d8; font-weight: 300; max-width: 60ch; font-size: 1.1rem; margin: 0; }
+    
+    /* Grid Layout */
+    .grid { display: grid; grid-template-columns: 1fr; gap: 40px; margin-top: 40px; }
+    
+    /* Media Cards */
+    .media-card { 
+      background: var(--card); 
+      border: 1px solid rgba(255, 255, 255, 0.06); 
+      border-radius: 12px; 
+      padding: 40px; 
+      backdrop-filter: blur(8px);
+      position: relative;
+    }
+    @media (max-width: 768px) { .media-card { padding: 24px; } }
+    
+    .media-card h2 { font-family: 'Cinzel', serif; margin: 12px 0 8px; color: var(--gold); font-weight: 500; font-size: 1.5rem; }
+    .media-card p { color: #c8c8c8; font-size: 0.98rem; font-weight: 300; margin: 0; }
+    
+    /* Optimized Vertical Container for Shorts (9:16) */
+    .video-container-vertical { 
+      max-width: 340px; 
+      margin: 32px auto 16px; 
+      width: 100%; 
+      aspect-ratio: 9 / 16; 
+      background: #000; 
+      border-radius: 12px; 
+      overflow: hidden; 
+      border: 1px solid rgba(212, 175, 55, 0.25); 
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.6); 
+    }
+    .video-container-vertical iframe { width: 100%; height: 100%; border: none; }
+    
+    /* UI Badges & Buttons */
+    .chip { display: inline-block; font-size: .68rem; letter-spacing: .15em; text-transform: uppercase; color: var(--muted); border: 1px solid rgba(255, 255, 255, 0.1); padding: 5px 12px; border-radius: 999px; font-weight: 500; }
+    .arrow-link { color: var(--gold); font-size: .9rem; display: inline-block; margin-top: 16px; font-weight: 500; text-decoration: none; }
+    .arrow-link:hover { opacity: 0.8; }
+    
+    .fallback-btn {
+      display: block; max-width: 340px; margin: 12px auto 0; text-align: center;
+      padding: 10px; font-size: 0.8rem; border-radius: 6px; color: var(--muted);
+      border: 1px solid rgba(255, 255, 255, 0.08); text-transform: uppercase; letter-spacing: 0.05em;
+    }
+    .fallback-btn:hover { border-color: var(--gold); color: var(--gold); }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    
+    <!-- Navigation Back Link -->
+    <nav class="nav">
+      <a class="btn-back" href="index.html">← Return to Trade Operations</a>
+      <span class="chip">Venture Laboratory</span>
+    </nav>
+
+    <!-- Header Block -->
+    <header>
+      <h1 class="headline">Media Prototyping & Generative Systems</h1>
+      <p class="lead">An isolated technical workspace for testing advanced neural video pipelines, custom programmatic editing systems, and automated content frameworks away from core enterprise logistics lines.</p>
+    </header>
+
+    <!-- Main Workspace Content -->
+    <main class="grid">
+      
+      <!-- Video Production Pipeline Video -->
+      <article class="media-card">
+        <span class="chip">Active Protocol // Synthetic Video</span>
+        <h2>Rendering Engine Sandbox</h2>
+        <p>Analyzing automated runtime layout structures, localized video generation scaling, and script-to-frame styling parameters using integrated cloud synthesis toolsets.</p>
+        
+        <!-- Native Player Render with Strict Origin Parameters -->
+        <div class="video-container-vertical">
+          <iframe 
+            src="https://www.youtube-nocookie.com/embed/AaekktOm9Bc" 
+            title="Torvaire Lab Generative Output" 
+            referrerpolicy="strict-origin-when-cross-origin"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            allowfullscreen>
+          </iframe>
+        </div>
+        
+        <!-- External Safe Link for highly restricted browsers / local testing -->
+        <a href="https://youtube.com/shorts/AaekktOm9Bc" target="_blank" rel="noopener" class="fallback-btn">
+          Open Direct Video Window ↗
+        </a>
+      </article>
+
+      <!-- Digital Distribution Subsidiary Sub-Reference -->
+      <article class="media-card">
+        <span class="chip">System Frameworks</span>
+        <h2>Borderless Blueprint</h2>
+        <p>A testing architecture dedicated to high-efficiency digital distribution workflows, custom automation blueprints, and minimal infrastructure optimization.</p>
+        <a href="https://borderlessblueprint.com" target="_blank" rel="noopener" class="arrow-link">borderlessblueprint.com →</a>
+      </article>
+
+    </main>
+  </div>
+</body>
+</html>
