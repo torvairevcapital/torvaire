@@ -3,149 +3,68 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Torvaire — Private Holding & Venture Studio</title>
-  <meta name="description" content="Torvaire Capital — a discreet holding, global import, and AI representation firm. Sourced with old-world standards, executed with next-gen tempo." />
+  <title>Torvaire — Wholesale Import, Export & Private Mandates</title>
+  <meta name="description" content="Torvaire — A private holding and global procurement firm specializing in cross-border wholesale logistics, premium commodity import/export, and industrial trade facilitation." />
 
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
-  <link rel="icon" type="image/png" sizes="64x64" href="/favicon-64.png">
-  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-
-  <meta property="og:title" content="Torvaire">
-  <meta property="og:description" content="Private Holding & Venture Studio.">
-  <meta property="og:image" content="https://torvaire.com/og-image.png">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://torvaire.com">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="theme-color" content="#0b0c10"/>
-
   <style>
     :root {
-      --bg: #0b0c10; 
-      --bg-soft: #0e1016; 
-      --text: #F2F2F2; 
-      --muted: #9aa0a6;
-      --gold: #D4AF37; 
-      --card: rgba(16, 19, 26, 0.6); 
-      --ring: rgba(212, 175, 55, 0.15);
+      --bg: #0b0c10; --bg-soft: #0e1016; --text: #F2F2F2; --muted: #9aa0a6;
+      --gold: #D4AF37; --card: rgba(16, 19, 26, 0.6); --ring: rgba(212, 175, 55, 0.15);
     }
-    
-    * { box-sizing: border-box; } 
-    html, body { height: 100%; scroll-behavior: smooth; }
-    
+    * { box-sizing: border-box; } html, body { height: 100%; scroll-behavior: smooth; }
     body {
       margin: 0;
       background:
         radial-gradient(1200px 800px at 80% -10%, rgba(212, 175, 55, .05), transparent 60%),
         radial-gradient(1000px 700px at -10% 110%, rgba(212, 175, 55, .03), transparent 60%),
         linear-gradient(180deg, var(--bg), var(--bg-soft));
-      color: var(--text); 
-      font-family: 'Inter', system-ui, -apple-system, sans-serif;
-      letter-spacing: .01em;
-      line-height: 1.6;
+      color: var(--text); font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      letter-spacing: .01em; line-height: 1.6;
     }
-    
-    a { color: inherit; text-decoration: none; transition: color 0.2s ease; }
+    a { color: inherit; text-decoration: none; transition: all 0.2s ease; }
     .wrap { max-width: 1160px; margin: 0 auto; padding: 40px 24px 100px; }
-
-    /* Header */
     .nav { display: flex; align-items: center; justify-content: space-between; gap: 20px; }
-    .brand { display: flex; align-items: center; gap: 4px; }
+    .nav-links { display: flex; align-items: center; gap: 24px; }
+    .nav-links a:hover { color: var(--gold); }
     .logo-wide { height: 54px; width: auto; display: block; }
-    @media (max-width: 768px) { .logo-wide { height: 42px; } }
-    
-    .pill { 
-      border: 1px solid rgba(212, 175, 55, 0.35); 
-      color: var(--gold); 
-      padding: 10px 20px; 
-      border-radius: 999px; 
-      font-size: .88rem; 
-      font-weight: 500;
-      backdrop-filter: blur(4px); 
-      transition: all 0.3s ease;
-    }
+    @media (max-width: 768px) { .logo-wide { height: 42px; } .nav-links { display: none; } }
+    .pill { border: 1px solid rgba(212, 175, 55, 0.35); color: var(--gold); padding: 10px 20px; border-radius: 999px; font-size: .88rem; font-weight: 500; backdrop-filter: blur(4px); }
     .pill:hover { background: rgba(212, 175, 55, 0.1); border-color: var(--gold); }
-
-    /* Hero */
     .hero { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 56px; padding: 80px 0 48px; align-items: center; }
     @media (max-width: 900px) { .hero { grid-template-columns: 1fr; padding: 40px 0 24px; gap: 32px; } }
-    
     .kicker { color: var(--gold); letter-spacing: .2em; font-size: .85rem; text-transform: uppercase; font-weight: 500; }
     .headline { font-family: 'Cinzel', serif; font-size: clamp(34px, 5vw, 56px); line-height: 1.15; margin: 12px 0 20px; font-weight: 400; }
     .lead { color: #d8d8d8; font-weight: 300; font-size: 1.1rem; max-width: 54ch; }
-    
     .cta-row { display: flex; gap: 16px; margin-top: 32px; flex-wrap: wrap; }
-    .btn { 
-      display: inline-flex; align-items: center; gap: 10px; padding: 14px 24px; border-radius: 8px;
-      background: linear-gradient(180deg, rgba(212, 175, 55, 0.15), rgba(212, 175, 55, 0.05));
-      border: 1px solid rgba(212, 175, 55, 0.4); font-weight: 500; color: var(--gold); transition: all 0.2s ease;
-    }
+    .btn { display: inline-flex; align-items: center; gap: 10px; padding: 14px 24px; border-radius: 8px; background: linear-gradient(180deg, rgba(212, 175, 55, 0.15), rgba(212, 175, 55, 0.05)); border: 1px solid rgba(212, 175, 55, 0.4); font-weight: 500; color: var(--gold); }
     .btn:hover { transform: translateY(-2px); box-shadow: 0 8px 24px var(--ring); border-color: var(--gold); }
     .ghost { background: transparent; color: var(--text); border: 1px solid rgba(255, 255, 255, 0.15); }
-    .ghost:hover { background: rgba(255, 255, 255, 0.05); border-color: rgba(255, 255, 255, 0.3); }
-
-    /* Video Player Styles */
-    .showcase-wrapper { margin: 24px 0 48px; width: 100%; }
-    .video-frame { position: relative; width: 100%; border: 1px solid rgba(255, 255, 255, 0.06); border-radius: 12px; background: #000; line-height: 0; overflow: hidden; box-shadow: 0 24px 48px rgba(0,0,0,0.4); }
-    .torvaire-reel { width: 100%; height: auto; filter: grayscale(15%); transition: filter 0.5s ease; }
-    .torvaire-reel:hover { filter: grayscale(0%); }
-
-    /* Cards Grid */
     .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 32px; }
     @media (max-width: 900px) { .grid { grid-template-columns: 1fr; gap: 16px; } }
-    
-    .card { 
-      background: var(--card); 
-      border: 1px solid rgba(255, 255, 255, 0.06); 
-      border-radius: 12px; 
-      padding: 28px; 
-      position: relative; 
-      overflow: hidden; 
-      backdrop-filter: blur(8px);
-      transition: transform 0.3s ease, border-color 0.3s ease;
-    }
-    .card:hover { transform: translateY(-4px); border-color: rgba(212, 175, 55, 0.25); }
-    .card:before { 
-      content: ""; position: absolute; inset: -1px; border-radius: 12px; 
-      background: radial-gradient(400px 200px at 50% -10%, rgba(212, 175, 55, 0.08), transparent 50%); 
-      pointer-events: none;
-    }
+    .card { background: var(--card); border: 1px solid rgba(255, 255, 255, 0.06); border-radius: 12px; padding: 28px; position: relative; overflow: hidden; backdrop-filter: blur(8px); }
+    .card:before { content: ""; position: absolute; inset: -1px; border-radius: 12px; background: radial-gradient(400px 200px at 50% -10%, rgba(212, 175, 55, 0.08), transparent 50%); pointer-events: none; }
     .card h3 { font-family: 'Cinzel', serif; margin: 12px 0 10px; font-size: 1.25rem; color: var(--gold); font-weight: 500; }
     .card p { margin: 0; color: #c8c8c8; font-size: .95rem; font-weight: 300; }
     .chip { display: inline-block; font-size: .68rem; letter-spacing: .15em; text-transform: uppercase; color: var(--muted); border: 1px solid rgba(255, 255, 255, 0.1); padding: 5px 12px; border-radius: 999px; font-weight: 500; }
-    
-    /* Interactive Make Intake Form Styles */
-    .form-container { max-width: 650px; margin: 40px 0 20px; text-align: left; width: 100%; }
-    .field-group { margin-bottom: 24px; }
-    .field-group label { display: block; font-size: 0.75rem; text-transform: uppercase; letter-spacing: .15em; margin-bottom: 8px; color: var(--muted); font-weight: 500; }
-    .field-group input, .field-group select, .field-group textarea {
-      width: 100%; padding: 14px; background: rgba(10, 11, 14, 0.8); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 6px; color: var(--text); font-family: 'Inter', sans-serif; font-size: 0.95rem; box-sizing: border-box; transition: all 0.3s ease;
-    }
-    .field-group input:focus, .field-group select:focus, .field-group textarea:focus { border-color: var(--gold); background: rgba(14, 16, 22, 0.9); outline: none; box-shadow: 0 0 12px var(--ring); }
-    .field-group select { appearance: none; -webkit-appearance: none; cursor: pointer; }
-    
-    /* Contact Section Customization */
-    .contact-card { padding: 40px; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start; gap: 12px; }
+    .contact-card { padding: 32px; display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap; }
+    @media (max-width: 768px) { .contact-card { flex-direction: column; align-items: flex-start; } }
     .small { font-size: .85rem; color: var(--muted); }
-    .arrow-link { color: var(--gold); font-size: .88rem; display: inline-block; margin-top: 12px; font-weight: 500; }
-    .arrow-link:hover { opacity: 0.8; }
-
-    /* Footer */
     footer { margin-top: 96px; padding-top: 32px; border-top: 1px solid rgba(255, 255, 255, 0.06); color: var(--muted); font-size: .88rem; }
     .footgrid { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
-    @media (max-width: 768px) { .footgrid { flex-direction: column; align-items: flex-start; gap: 24px; } }
   </style>
 </head>
 <body>
   <div class="wrap">
     
-    <!-- NAVIGATION -->
+    <!-- Header -->
     <nav class="nav">
       <div class="brand">
-        <svg class="logo-wide" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 120" role="img" aria-label="Torvaire Capital logo">
+        <svg class="logo-wide" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 120" role="img" aria-label="Torvaire logo">
           <defs>
             <style>
               .gold-stroke { stroke: #D4AF37; fill: none; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; }
@@ -159,159 +78,84 @@
             <path class="gold-stroke" d="M 26,-16 A 32,32 0 1 0 26,16"/>
             <line class="gold-stroke" x1="-22" y1="0" x2="22" y2="0"/>
             <line class="gold-stroke" x1="0" y1="-22" x2="0" y2="22"/>
-            <line class="gold-stroke" x1="-14" y1="-14" x2="14" y2="14"/>
-            <line class="gold-stroke" x1="-14" y1="14" x2="14" y2="-14"/>
           </g>
           <g transform="translate(140,65)">
             <text class="gold-text" x="0" y="0" font-size="34" font-weight="600" letter-spacing="4">TORVAIRE</text>
-            <text class="gold-text" x="0" y="28" font-size="16" font-weight="400" letter-spacing="8">CAPITAL</text>
+            <text class="gold-text" x="0" y="28" font-size="16" font-weight="400" letter-spacing="8">HOLDINGS</text>
           </g>
         </svg>
       </div>
-      <a class="pill" href="#mandates">Active Focus Areas</a>
+      <div class="nav-links">
+        <a href="#capabilities">Trade Mandates</a>
+        <a href="portfolio.html">Media Studio</a>
+        <a class="pill" href="#contact">Wholesale Inquiries</a>
+      </div>
     </nav>
 
-    <!-- HERO SECTION -->
+    <!-- Hero -->
     <section class="hero">
       <div>
-        <div class="kicker">INTEGRATION • WORKFLOWS • GENERATIVE MEDIA</div>
-        <h1 class="headline">Quiet Capital.<br>Sharp Execution.</h1>
-        <p class="lead">Torvaire operates as a private holding and modern venture studio. We leverage next-generation artificial intelligence to engineer self-sustaining workflows, premium micro-brands, and high-impact commercial media engines.</p>
+        <div class="kicker">Global Procurement • Import & Export • Wholesale Distribution</div>
+        <h1 class="headline">Discreet Logistics.<br>Precise Execution.</h1>
+        <p class="lead">Torvaire operates as a private multi-sector holding and global procurement firm. We secure reliable supply architectures, anchor cross-border wholesale trade routes, and manage high-end commodity distribution under strict client confidentiality.</p>
         <div class="cta-row">
-          <a class="btn" href="#mandates">Explore Focus Areas</a>
+          <a class="btn" href="#capabilities">Review Core Mandates</a>
           <a class="btn ghost" href="#contact">Initiate Contact</a>
         </div>
       </div>
       <div>
         <div class="card" style="min-height:220px; display:flex; flex-direction:column; justify-content:center;">
-          <span class="chip" style="align-self: flex-start;">Operational Stance</span>
-          <h3>Lean Architectures, High Conviction</h3>
-          <p>We analyze friction points for established businesses to map out clear AI integration parameters, protecting margins, reducing overhead, and multiplying scaling output.</p>
+          <span class="chip" style="align-self: flex-start;">Trade Posture</span>
+          <h3>Institutional Asset Mobility</h3>
+          <p>We work exclusively with vetted producers and commercial wholesalers. From supply chains to container tracking, we execute with structured corporate precision.</p>
         </div>
       </div>
     </section>
 
-   <!-- CINEMATIC MEDIA SHOWCASE -->
-    <section class="showcase-wrapper">
-      <div class="video-frame">
-        <!-- Native, self-hosted streaming path. Bulletproof execution. -->
-        <video autoplay loop muted playsinline controls class="torvaire-reel">
-          <source src="CC v 1.11.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
-      </div>
-    </section>
-
-    <!-- OPERATIONAL FOCUS GRID -->
-    <section id="mandates">
+    <!-- Capabilities Section -->
+    <section id="capabilities">
       <div class="grid">
+        <!-- Wholesale Import/Export -->
         <article class="card">
-          <span class="chip">Strategic Integration</span>
-          <h3>01 / Business AI Audit</h3>
-          <p>We break down business processes to identify structural bottlenecks. From executive capabilities mapping to comprehensive project implementation, we deploy clear AI strategies built strictly for productivity and capital efficiency.</p>
+          <span class="chip">Primary Trade</span>
+          <h3>Agricultural Sourcing</h3>
+          <p>End-to-end management of premium commodity lots. Our focal framework guarantees absolute origin mapping, strict quality assurance protocols, and custom freight execution for estate-grown tea imports and wholesale botanicals.</p>
         </article>
         
+        <!-- Logistics & Supply -->
         <article class="card">
-          <span class="chip">Autonomous Pipelines</span>
-          <h3>02 / Automated Workflows</h3>
-          <p>Replacing repetitive corporate overhead with optimized AI pipelines. We orchestrate systems that automate data management, operational scheduling, and content operations—scaling your output in real-time.</p>
+          <span class="chip">Logistics</span>
+          <h3>Cross-Border Supply</h3>
+          <p>Facilitating complex global import/export maneuvers. We oversee regulatory entry filings, custom clearing channels, and secure high-volume container freight distribution lines for corporate suppliers across key European and global hubs.</p>
         </article>
         
+        <!-- B2B Strategic Allocations -->
         <article class="card">
-          <span class="chip">Synthetic Creative</span>
-          <h3>03 / Generative Media</h3>
-          <p>Advanced media infrastructure engineering custom advertising models, premium video content pipelines, and localized design assets. High-impact commercial production deployed at hyper-lean execution speeds.</p>
-        </article>
-
-        <!-- PRESERVED DATA STRUCTURE -->
-        <article class="card" style="grid-column: span 1;">
-          <span class="chip">Digital Systems</span>
-          <h3>04 / Borderless Blueprint</h3>
-          <p>Our public-facing framework for design-led digital asset distribution, operational automation, and tech experiments. Built to showcase extreme efficiency and hyper-lean architectural scaling.</p>
-          <a href="https://borderlessblueprint.com" target="_blank" rel="noopener" class="arrow-link">borderlessblueprint.com →</a>
+          <span class="chip">Representation</span>
+          <h3>Private-Label Mandates</h3>
+          <p>Providing white-glove trade allocation services for high-volume commercial brokers. We manage white-label sourcing structures quietly, leaving the retail spotlight entirely to our corporate clients.</p>
         </article>
       </div>
     </section>
 
-    <!-- INTAKE CONVERSATION & FORM SECTION -->
+    <!-- Contact -->
     <section id="contact" style="margin-top:48px">
       <div class="card contact-card">
         <div>
-          <h3 style="margin:0 0 6px">Initiate Contact</h3>
-          <p style="margin:0 0 24px; color:#d0d0d0; font-size:0.95rem; font-weight:300;">Discreet inquiries and high-conviction mandates only. No noise.</p>
+          <h3 style="margin:0 0 6px">Corporate Desk</h3>
+          <p style="margin:0; color:#d0d0d0; font-size:0.95rem; font-weight:300;">Commercial wholesale inquiries and logistics syndication only. Standard KYC documentation required.</p>
         </div>
-
-        <div class="form-container">
-          <!-- Connect your Custom Make Webhook URL directly here -->
-          <form action="YOUR_MAKE_WEBHOOK_URL_HERE" method="POST">
-            
-            <div class="field-group">
-              <label for="name">Name / Company</label>
-              <input type="text" id="name" name="name" required placeholder="John Doe / Acme Corp">
-            </div>
-
-            <div class="field-group">
-              <label for="email">Email Address</label>
-              <input type="email" id="email" name="email" required placeholder="name@company.com">
-            </div>
-
-            <div class="field-group">
-              <label for="phone">Phone Number</label>
-              <input type="tel" id="phone" name="phone" required placeholder="+1 (416) 555-0199">
-            </div>
-
-            <div class="field-group">
-              <label for="objective">Primary Objective</label>
-              <select id="objective" name="objective" required>
-                <option value="" disabled selected style="color: #555;">Select execution track...</option>
-                <option value="Generative Media / Video Production">Generative Media & Video Production</option>
-                <option value="Workflow Automation">Workflow Automation / Efficiency</option>
-                <option value="Strategic AI Implementation">Strategic AI Implementation (Intro & Audit)</option>
-                <option value="Venture Inquiry">Venture / Other Inquiries</option>
-              </select>
-            </div>
-
-            <div class="field-group">
-              <label for="message">Project Details / Query</label>
-              <textarea id="message" name="message" rows="5" required placeholder="Describe your current business bottlenecks or required commercial creative fields..."></textarea>
-            </div>
-
-            <div style="margin-top: 32px;">
-              <button type="submit" class="btn">Submit Mandate Request</button>
-            </div>
-          </form>
-        </div>
-
-        <div style="display:flex; gap:12px; align-items:center; flex-wrap:wrap; margin-top: 24px; border-top: 1px solid rgba(255, 255, 255, 0.06); width: 100%; padding-top: 24px;">
-          <span class="small" style="text-transform: uppercase; letter-spacing: 1px;">Direct Channels:</span>
-          <a class="arrow-link" href="mailto:peter@torvaire.com" style="margin:0;">peter@torvaire.com</a>
-          <span style="color: rgba(255,255,255,0.2)">•</span>
-          <a class="arrow-link" href="mailto:hq@borderlessblueprint.com" style="margin:0;">hq@borderlessblueprint.com</a>
+        <div style="display:flex; gap:12px; align-items:center; flex-wrap:wrap">
+          <a class="btn" href="mailto:peter@torvaire.com">peter@torvaire.com</a>
         </div>
       </div>
     </section>
 
-    <!-- FOOTER -->
+    <!-- Footer -->
     <footer>
       <div class="footgrid">
-        <div class="brand">
-          <svg class="logo-wide" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 120" role="img" aria-label="Torvaire Capital logo" style="height:38px">
-            <g transform="translate(60,60)">
-              <circle class="gold-stroke" cx="0" cy="0" r="42"/>
-              <line class="gold-stroke" x1="-28" y1="-28" x2="28" y2="-28"/>
-              <line class="gold-stroke" x1="0" y1="-28" x2="0" y2="28"/>
-              <path class="gold-stroke" d="M 26,-16 A 32,32 0 1 0 26,16"/>
-              <line class="gold-stroke" x1="-22" y1="0" x2="22" y2="0"/>
-              <line class="gold-stroke" x1="0" y1="-22" x2="0" y2="22"/>
-              <line class="gold-stroke" x1="-14" y1="-14" x2="14" y2="14"/>
-              <line class="gold-stroke" x1="-14" y1="14" x2="14" y2="-14"/>
-            </g>
-            <g transform="translate(140,70)">
-              <text class="gold-text" x="0" y="0" font-size="36" font-weight="600" letter-spacing="4">TORVAIRE</text>
-            </g>
-          </svg>
-        </div>
-        <div class="small">© 2026 Torvaire Capital. Confidentiality guaranteed. Old rules, new tools.</div>
+        <div class="small">© 2026 Torvaire Holdings. All trade data strictly confidential.</div>
+        <div class="small"><a href="portfolio.html" style="color:var(--gold)">Venture Laboratory & Media Studio →</a></div>
       </div>
     </footer>
   </div>
